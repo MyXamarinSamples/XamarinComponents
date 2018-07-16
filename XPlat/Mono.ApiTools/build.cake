@@ -3,7 +3,7 @@
 
 var TARGET = Argument("t", Argument("target", "Default"));
 
-var MONO_TAG = "mono-5.12.0.273";
+var MONO_TAG = "master";
 
 var ASSEMBLY_VERSION = "5.0.0.0";
 var ASSEMBLY_FILE_VERSION = "5.12.0.0";
@@ -19,7 +19,7 @@ Task("externals")
 		"mcs/tools/corcompare/mono-api-info.exe.sources");
 
 	DownloadMonoSources(MONO_TAG, "./externals/mono-api-diff/",
-		"mcs/tools/corcompare/mono-api-diff.cs");
+		"mcs/tools/mono-api-diff/mono-api-diff.exe.sources");
 
 	DownloadMonoSources(MONO_TAG, "./externals/mono-api-html/",
 		"mcs/tools/mono-api-html/mono-api-html.exe.sources");
