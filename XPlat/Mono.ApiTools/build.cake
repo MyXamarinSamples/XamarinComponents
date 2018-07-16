@@ -21,6 +21,11 @@ Task("externals")
 	DownloadMonoSources(MONO_TAG, "./externals/mono-api-diff/",
 		"mcs/tools/mono-api-diff/mono-api-diff.exe.sources");
 
+	// TODO: wait for https://github.com/mono/mono/pull/9556
+	DownloadFile(
+		"https://raw.githubusercontent.com/mattleibow/mono/patch-1/mcs/tools/mono-api-diff/mono-api-diff.cs",
+		"./externals/mono-api-diff/mono-api-diff.cs");
+
 	DownloadMonoSources(MONO_TAG, "./externals/mono-api-html/",
 		"mcs/tools/mono-api-html/mono-api-html.exe.sources");
 });
